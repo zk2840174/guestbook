@@ -81,18 +81,32 @@
 
             console.log(msg);
 
-            const $modal = $(".modal");
 
-            if(msg){
-                $(".modal").show();
-            }
+            const modalObj = new bootstrap.Modal(document.querySelector('.modal'))
 
-            $(".modal-title .close").on("click", () => {
-                $modal.hide()
-            })
-            $(".modal-footer .close").on("click", () => {
-                $modal.hide()
-            })
+            console.log("----------------------")
+            console.log(modalObj)
+
+            modalObj.show()
+
+            setTimeout(() => {
+
+                modalObj.hide()
+
+            }, 3000)
+
+            //const $modal = $(".modal");
+
+            // if(msg){
+            //     $(".modal").show();
+            // }
+            //
+            // $(".modal-title .close").on("click", () => {
+            //     $modal.hide()
+            // })
+            // $(".modal-footer .close").on("click", () => {
+            //     $modal.hide()
+            // })
 
         </script>
 
